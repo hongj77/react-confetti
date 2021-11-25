@@ -42,7 +42,10 @@
     "prepare": "yarn run lint && yarn run build",
     "semantic-release": "semantic-release",
     "commit": "git-cz",
-    "develop": "start-storybook -p 3000"
+    "develop": "start-storybook -p 3000",
+    "precommit": [
+      "build"
+    ]
   },
   "peerDependencies": {
     "react": "^16.3.0 || ^17.0.1"
