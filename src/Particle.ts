@@ -94,7 +94,7 @@ export default class Particle {
     this.context.save()
     this.context.translate(this.x, this.y)
     // this.context.rotate(this.angle)
-    this.context.scale(1, this.rotateY)
+    // this.context.scale(1, this.rotateY)
     // this.context.rotate(this.angle)
     this.context.beginPath()
     this.context.fillStyle = this.color
