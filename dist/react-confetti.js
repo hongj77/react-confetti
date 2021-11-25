@@ -638,10 +638,10 @@ var Particle = /*#__PURE__*/function () {
       this.rotateY += rotateDelta;
       this.angle += this.angularSpin;
       this.context.save();
-      this.context.translate(this.x, this.y);
-      this.context.rotate(this.angle);
-      this.context.scale(1, this.rotateY);
-      this.context.rotate(this.angle);
+      this.context.translate(this.x, this.y); // this.context.rotate(this.angle)
+      // this.context.scale(1, this.rotateY)
+      // this.context.rotate(this.angle)
+
       this.context.beginPath();
       this.context.fillStyle = this.color;
       this.context.strokeStyle = this.color;
