@@ -44,7 +44,7 @@
     "commit": "git-cz",
     "develop": "start-storybook -p 3000",
     "precommit": [
-      "build"
+      "yarn build"
     ]
   },
   "peerDependencies": {
