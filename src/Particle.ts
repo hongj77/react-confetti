@@ -81,9 +81,9 @@ export default class Particle {
     this.vx += wind
     this.vx *= friction
     this.vy *= friction
-    if(this.rotateY >= 1 && this.rotationDirection === RotationDirection.Positive) {
+    if (this.rotateY >= 1 && this.rotationDirection === RotationDirection.Positive) {
       this.rotationDirection = RotationDirection.Negative
-    } else if(this.rotateY <= -1 && this.rotationDirection === RotationDirection.Negative) {
+    } else if (this.rotateY <= -1 && this.rotationDirection === RotationDirection.Negative) {
       this.rotationDirection = RotationDirection.Positive
     }
 
@@ -93,19 +93,19 @@ export default class Particle {
     this.angle += this.angularSpin
     this.context.save()
     this.context.translate(this.x, this.y)
-    this.context.rotate(this.angle)
+    // this.context.rotate(this.angle)
     this.context.scale(1, this.rotateY)
-    this.context.rotate(this.angle)
+    // this.context.rotate(this.angle)
     this.context.beginPath()
     this.context.fillStyle = this.color
     this.context.strokeStyle = this.color
     this.context.globalAlpha = opacity
     this.context.lineCap = 'round'
     this.context.lineWidth = 2
-    if(drawShape && typeof drawShape === 'function') {
+    if (drawShape && typeof drawShape === 'function') {
       drawShape.call(this, this.context)
     } else {
-      switch(this.shape) {
+      switch (this.shape) {
         case ParticleShape.Circle: {
           this.context.beginPath()
           this.context.arc(0, 0, this.radius, 0, 2 * Math.PI)
